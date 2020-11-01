@@ -1,8 +1,9 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 int main()
 {
-     int p, q, r, s, a, b, c, d, e;
+     int p, q, r, s, a, b, c, d;
      cout << "Umur Ayah\t: "; cin >> p;
      if(p <= 12){
         a = 15000;
@@ -11,7 +12,7 @@ int main()
      } else if(p > 20){
         a = 30000;
      } else {
-        return 0;
+        goto selesai;
      }
      cout << "Umur Ibu\t: "; cin >> q;
      if(q <= 12){
@@ -21,7 +22,7 @@ int main()
      } else if(q > 20){
         b = 30000;
      } else {
-        return 0;
+        goto selesai;
      }
      cout << "Umur Anak 1\t: "; cin >> r;
      if(r <= 12){
@@ -31,7 +32,7 @@ int main()
      } else if(r > 20){
         c = 30000;
      } else {
-        return 0;
+        goto selesai;
      }
      cout << "Umur Anak 2\t: "; cin >> s;
      if(s <= 12){
@@ -41,9 +42,10 @@ int main()
      } else if(s > 20){
         d = 30000;
      } else {
-        return 0;
+        goto selesai;
      }
      cout << "Tagihan satu bulan adalah Rp.";
      cout << 30*(a+b+c+d)<< endl;
+     selesai :
      return 0;
 }
